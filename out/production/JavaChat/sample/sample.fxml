@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -28,12 +29,12 @@
                   <TilePane fx:id="dialogsPlace" prefHeight="633.0" prefWidth="307.0" />
                </content>
             </ScrollPane>
-            <ScrollPane layoutX="309.0" layoutY="85.0" prefHeight="585.0" prefWidth="1057.0" style="-fx-border-radius: 25;">
+            <ScrollPane fx:id="msgScrollBox" hbarPolicy="NEVER" layoutX="309.0" layoutY="85.0" pannable="true" prefHeight="587.0" prefWidth="1065.0" style="-fx-border-radius: 25; -fx-padding: 20;" vbarPolicy="NEVER">
                <content>
-                  <TilePane fx:id="messagePlace" prefHeight="640.0" prefWidth="1039.0" />
+                  <FlowPane fx:id="messagePlace" prefHeight="832.0" prefWidth="1004.0" />
                </content>
             </ScrollPane>
-            <Button fx:id="messageSend" layoutX="1177.0" layoutY="671.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="197.0" style="-fx-background-color: #2574a9;" text="Отправить" textFill="#fffefe">
+            <Button fx:id="messageSend" layoutX="1177.0" layoutY="671.0" mnemonicParsing="false" onAction="#sendMsgAction" prefHeight="46.0" prefWidth="197.0" style="-fx-background-color: #2574a9;" text="Отправить" textFill="#fffefe">
                <font>
                   <Font name="Calibri" size="26.0" />
                </font>
